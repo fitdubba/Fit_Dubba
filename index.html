@@ -16,7 +16,7 @@ color:white;
 
 .hero{
 height:90vh;
-background:url('https://images.unsplash.com/photo-1600891964092-4316c288032e');
+background:url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -37,22 +37,29 @@ h1{
 font-size:50px;
 margin-bottom:10px;
 }
-..toplogo{
+.toplogo{
 position:absolute;
 top:0;
 left:0;
 width:100%;
-padding:18px 25px;
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(8px);
-font-size:38px;
+height:95px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:42px;
 font-weight:700;
 font-family:'Montserrat',sans-serif;
 letter-spacing:1px;
 color:white;
 z-index:999;
-box-sizing:border-box;
 text-shadow:0 3px 10px rgba(0,0,0,0.8);
+
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200');
+
+background-size:cover;
+background-position:center;
 }
 .btn{
 background:#00c853;
@@ -125,7 +132,7 @@ background:#111;
 </head>
 
 <body>
-  <h1 class="toplogo"> Fit Dubba</h1>
+  <div class="toplogo">💪 Fit Dubba</div>
 <a href="https://wa.me/918340023013" class="wa-float" target="_blank">💬</a>
 
 <style>
