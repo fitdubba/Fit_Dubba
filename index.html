@@ -1,470 +1,269 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
-<title>Fit Dubba | Protein Meals Vijayawada</title>
-<style>
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0d0d0d;
-color:white;
-}
+export default function DailyDabbHomepage() { const menuItems = [ { name: 'Andhra Veg Meals', price: '₹99', desc: 'Fresh home-style meals with rice, curry, dal & fry.', }, { name: 'Chicken Meals', price: '₹149', desc: 'Spicy Andhra chicken curry with complete meals.', }, { name: 'Morning Tiffins', price: '₹59', desc: 'Idly, dosa, upma & chutneys delivered hot.', }, ];
 
-.hero{
+const plans = [ { title: 'Weekly Plan', price: '₹699', }, { title: 'Monthly Plan', price: '₹2499', }, { title: 'Office Combo', price: '₹3999', }, ];
 
-.overlay{
-background:rgba(0,0,0,0.7);
-padding:40px;
-border-radius:20px;
-max-width:500px;
-}
+return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Navbar */} <nav className="flex items-center justify-between px-6 py-5 border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur z-50"> <h1 className="text-2xl font-bold tracking-wide text-orange-400"> Daily Dabb </h1>
 
-h1{
-font-size:50px;
-margin-bottom:10px;
-}.toplogo{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-padding:12px 15px;
-box-sizing:border-box;
+<div className="hidden md:flex gap-8 text-sm text-gray-300">
+      <a href="#menu" className="hover:text-orange-400 transition">
+        Menu
+      </a>
+      <a href="#plans" className="hover:text-orange-400 transition">
+        Plans
+      </a>
+      <a href="#about" className="hover:text-orange-400 transition">
+        About
+      </a>
+      <a href="#contact" className="hover:text-orange-400 transition">
+        Contact
+      </a>
+    </div>
 
-background:
-linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+    <button className="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-full text-sm font-semibold shadow-lg shadow-orange-500/30">
+      Order Now
+    </button>
+  </nav>
 
-background-size:cover;
-background-position:center;
+  {/* Hero Section */}
+  <section className="px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center">
+    <div>
+      <p className="uppercase tracking-[5px] text-orange-400 text-sm mb-4">
+        Homemade Food Delivery
+      </p>
 
-z-index:999;
-}
+      <h2 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Fresh Meals
+        <br />
+        Delivered Daily 🍱
+      </h2>
 
-.logo-container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:100%;
-}
+      <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-8">
+        Healthy Andhra-style homemade food delivered directly to your
+        home, office, or hostel. Freshly cooked every day with authentic
+        taste.
+      </p>
 
-.left-info,
-.right-info{
-font-size:14px;
-font-weight:600;
-line-height:1.8;
-color:white;
-text-shadow:0 2px 8px rgba(0,0,0,0.9);
-width:30%;
-}
+      <div className="flex flex-wrap gap-4">
+        <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-full font-semibold shadow-2xl shadow-orange-500/40">
+          Start Subscription
+        </button>
 
-.site-name{
-font-size:42px;
-font-weight:900;
-text-align:center;
-width:40%;
-color:white;
-letter-spacing:2px;
-font-family:'Montserrat',sans-serif;
-text-shadow:0 4px 15px rgba(0,0,0,0.9);
-}
+        <button className="border border-white/20 hover:border-orange-400 hover:text-orange-400 transition px-8 py-4 rounded-full font-semibold">
+          View Menu
+        </button>
+      </div>
+    </div>
 
-.right-info{
-text-align:right;
-}
-} .topcontact{
-position:absolute;
-top:105px;
-width:100%;
-text-align:center;
-font-size:15px;
-font-family:'Montserrat',sans-serif;
-font-weight:500;
-color:white;
-z-index:999;
-text-shadow:0 2px 8px rgba(0,0,0,0.8);
-}
-.btn{
-background:#00c853;
-padding:15px 30px;
-border-radius:12px;
-text-decoration:none;
-color:white;
-font-size:20px;
-display:inline-block;
-margin-top:20px;
-}
+    <div className="relative">
+      <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full"></div>
 
-.section{
-padding:40px 20px;
-}
+      <img
+        src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop"
+        alt="Food"
+        className="relative rounded-[35px] shadow-2xl border border-white/10 object-cover h-[500px] w-full"
+      />
+    </div>
+  </section>
 
-.card{
-background:#1b1b1b;
-padding:20px;
-margin:20px 0;
-border-radius:20px;
-box-shadow:0 0 15px rgba(0,255,136,0.3);
-}
-.fitgrid{
-display:grid;
-gap:20px;
-margin-top:30px;
-}
+  {/* Stats */}
+  <section className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-16 pb-20">
+    {[
+      ['10K+', 'Meals Delivered'],
+      ['4.9★', 'Customer Rating'],
+      ['100%', 'Fresh Cooking'],
+      ['30min', 'Fast Delivery'],
+    ].map((item) => (
+      <div
+        key={item[0]}
+        className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center"
+      >
+        <h3 className="text-3xl font-bold text-orange-400 mb-2">
+          {item[0]}
+        </h3>
+        <p className="text-gray-400 text-sm">{item[1]}</p>
+      </div>
+    ))}
+  </section>
 
-.fitbox{
-background:#111;
-padding:15px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(0,255,136,0.2);
-}
+  {/* Menu */}
+  <section id="menu" className="px-6 md:px-16 py-20 bg-white/[0.03]">
+    <div className="text-center mb-16">
+      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
+        Popular Items
+      </p>
 
-.fitbox img{
-width:100%;
-height:220px;
-object-fit:cover;
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0d0d0d;
-color:white;
-}
+      <h2 className="text-4xl md:text-5xl font-black mb-4">
+        Today's Specials
+      </h2>
 
-.toplogo{
-position:sticky;
-top:0;
-width:100%;
-padding:12px 15px;
-box-sizing:border-box;
-background:#111;
-z-index:999;
-}
+      <p className="text-gray-400 max-w-2xl mx-auto">
+        Freshly prepared meals and tiffins with premium ingredients and
+        homemade taste.
+      </p>
+    </div>
 
-.logo-container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+    <div className="grid md:grid-cols-3 gap-8">
+      {menuItems.map((item) => (
+        <div
+          key={item.name}
+          className="bg-black border border-white/10 rounded-[30px] overflow-hidden hover:-translate-y-2 transition duration-300 shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+            alt={item.name}
+            className="h-60 w-full object-cover"
+          />
 
-.left-info,
-.right-info{
-width:30%;
-font-size:14px;
-font-weight:600;
-line-height:1.8;
-}
+          <div className="p-7">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-2xl font-bold">{item.name}</h3>
+              <span className="text-orange-400 font-bold text-xl">
+                {item.price}
+              </span>
+            </div>
 
-.right-info{
-text-align:right;
-}
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              {item.desc}
+            </p>
 
-.site-name{
-width:40%;
-text-align:center;
-font-size:42px;
-font-weight:900;
-font-family:'Montserrat',sans-serif;
-color:#00ff88;
-}
+            <button className="w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-semibold">
+              Order Now
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 
-.hero{
-height:320px;
-background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
-background-size:cover;
-background-position:center;
-}
+  {/* Subscription Plans */}
+  <section id="plans" className="px-6 md:px-16 py-24">
+    <div className="text-center mb-16">
+      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
+        Affordable Plans
+      </p>
 
-.home-layout{
-display:flex;
-justify-content:space-between;
-padding:20px;
-gap:15px;
-}
+      <h2 className="text-4xl md:text-5xl font-black mb-4">
+        Subscription Packages
+      </h2>
+    </div>
 
-.left-bar,
-.right-bar{
-width:20%;
-background:#111;
-padding:15px;
-border-radius:15px;
-line-height:2;
-font-size:15px;
-}
+    <div className="grid md:grid-cols-3 gap-8">
+      {plans.map((plan) => (
+        <div
+          key={plan.title}
+          className="border border-orange-500/30 bg-gradient-to-b from-orange-500/10 to-transparent rounded-[35px] p-10 text-center hover:scale-105 transition duration-300"
+        >
+          <h3 className="text-3xl font-bold mb-6">{plan.title}</h3>
 
-.fitgrid{
-width:60%;
-display:grid;
-gap:20px;
-}
+          <div className="text-5xl font-black text-orange-400 mb-8">
+            {plan.price}
+          </div>
 
-.fitbox{
-background:#111;
-padding:15px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 15px rgba(0,255,136,0.2);
-}
+          <ul className="space-y-4 text-gray-300 mb-10">
+            <li>✔ Daily Fresh Meals</li>
+            <li>✔ Fast Delivery</li>
+            <li>✔ WhatsApp Support</li>
+            <li>✔ Flexible Timings</li>
+          </ul>
 
-.fitbox img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:15px;
-}
+          <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-full font-semibold w-full">
+            Choose Plan
+          </button>
+        </div>
+      ))}
+    </div>
+  </section>
 
-.fitbox h3{
-color:#00ff88;
-font-size:26px;
-}
+  {/* About */}
+  <section
+    id="about"
+    className="px-6 md:px-16 py-24 bg-white/[0.03] grid md:grid-cols-2 gap-14 items-center"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop"
+      alt="Kitchen"
+      className="rounded-[35px] shadow-2xl border border-white/10 h-[450px] object-cover"
+    />
 
-.fitbox p{<div class="fitbox" onclick="alert('Egg Protein\n\n🥚 High Protein Food\n💪 Muscle Recovery\n⚡ Energy Boost\n₹99 Combo Available')">
-color:#ccc;
-}
+    <div>
+      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
+        Why Daily Dabb?
+      </p>
 
-h2{
-padding-left:20px;
-color:#00ff88;
-}<div class="fitbox" onclick="alert('Chicken Bowl\n\n🍗 Lean Protein\n🔥 Fat Loss Friendly\n💪 Muscle Gain Meal\n₹149 Combo Available')">
+      <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+        Homemade Taste
+        <br />
+        Premium Experience
+      </h2>
 
-.wa-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:30px;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-z-index:1000;
-}
-.login{
-background:#121212;
-padding:40px 20px;
-text-align:center;
-}
+      <p className="text-gray-400 leading-relaxed text-lg mb-8">
+        We focus on healthy, hygienic, and tasty homemade food for students,
+        employees, and families who want quality meals without compromise.
+      </p>
 
-input{
-width:90%;
-max-width:300px;
-padding:15px;
-margin:10px;
-border:none;
-border-radius:10px;
-font-size:16px;
-}
+      <div className="space-y-5">
+        <div className="flex items-center gap-4">
+          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
+          <p>No Preservatives</p>
+        </div>
 
-button{
-background:#00c853;
-color:white;
-padding:15px 25px;
-border:none;
-border-radius:10px;
-font-size:18px;
-}
+        <div className="flex items-center gap-4">
+          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
+          <p>Fresh Ingredients Daily</p>
+        </div>
 
-footer{
-padding:20px;
-text-align:center;
-background:#111;
-}
+        <div className="flex items-center gap-4">
+          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
+          <p>Affordable Subscription Plans</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</style>
-</head>
+  {/* Footer */}
+  <footer
+    id="contact"
+    className="px-6 md:px-16 py-14 border-t border-white/10"
+  >
+    <div className="grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 className="text-3xl font-black text-orange-400 mb-4">
+          Daily Dabb
+        </h3>
 
-<body>
-<div class="toplogo">
+        <p className="text-gray-400 leading-relaxed max-w-sm">
+          Fresh homemade meals delivered daily across Vijayawada.
+        </p>
+      </div>
 
-<div class="logo-container">
+      <div>
+        <h4 className="font-bold text-xl mb-5">Quick Links</h4>
 
-<div class="left-info">
-👤 K.Kranthi Kumar<br>
-📞 +91 918340023013
+        <div className="space-y-3 text-gray-400">
+          <p>Home</p>
+          <p>Menu</p>
+          <p>Plans</p>
+          <p>Contact</p>
+        </div>
+      </div>
+
+      <div>
+        <h4 className="font-bold text-xl mb-5">Contact</h4>
+
+        <div className="space-y-3 text-gray-400">
+          <p>📍 Vijayawada</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📧 dailydabb@gmail.com</p>
+          <p>📸 @dailydabb</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+      © 2026 Daily Dabb. All rights reserved.
+    </div>
+  </footer>
 </div>
 
-<div class="site-name">
-💪 Fit Dubba
-</div>
-
-<div class="right-info">
-✉️ fitdubba@gmail.com
-</div>
-
-</div>
-
-</div>
-</div>
-<a href="https://wa.me/918340023013" class="wa-float" target="_blank">💬</a>
-
-<style>
-.wa-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:30px;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 0 15px #25D366;
-z-index:1000;
-}
-</style>
-<div class="hero">
-
-</div>
-<div class="home-layout">
-
-<div class="left-bar">
-🥚 Eggs<br><br>
-🍗 Chicken<br><br>
-🌱 Soya<br><br>
-🥜 Peanut Butter<br><br>
-🥗 Sprouts<br><br>
-🫘 Beans<br><br>
-🥛 Protein Shake<br><br>
-🌾 Oats
-</div>
-
-
-<div class="right-bar">
-🥚 Eggs<br><br>
-🍗 Chicken<br><br>
-🥜 Peanut Butter<br><br>
-🥗 Sprouts<br><br>
-🌾 Oats<br><br>
-🥛 Protein Shake
-</div>
-
-</div>
-  <h2>🥚 High Protein Foods</h2>
-
-<div class="fitgrid">
-<div class="fitgrid">
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
-<h3>Egg Protein</h3>
-<p>High Protein Energy Food</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e">
-<h3>Chicken Bowl</h3>
-<p>Lean Muscle Building Meal</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
-<h3>Sprouts & Salad</h3>
-<p>Fiber Rich Healthy Food</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1579722821273-0f6c1f3f6b88">
-<h3>Protein Shake</h3>
-<p>Gym Recovery Drink</p>
-</div>
-
-</div>
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
-<h3>Egg Protein</h3>
-<p>High Protein Energy Food</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e">
-<h3>Chicken Bowl</h3>
-<p>Lean Muscle Building Meal</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
-<h3>Sprouts & Salad</h3>
-<p>Fiber Rich Healthy Food</p>
-</div>
-
-<body>
-
-<div class="toplogo">
-<div class="logo-container">
-
-<div class="left-info">
-👤 K.Kranthi Kumar<br>
-📞 +91 918340023013
-</div>
-
-<div class="site-name">
-💪 Fit Dubba
-</div>
-
-<div class="right-info">
-✉️ fitdubba@gmail.com
-</div>
-
-</div>
-</div>
-
-<a href="https://wa.me/918340023013" class="wa-float">💬</a>
-
-<div class="hero"></div>
-
-<h2>🥚 High Protein Foods</h2>
-
-<div class="home-layout">
-
-<div class="left-bar">
-🥚 Eggs<br><br>
-🍗 Chicken<br><br>
-🌱 Soya<br><br>
-🥜 Peanut Butter<br><br>
-🥗 Sprouts<br><br>
-🌾 Oats
-</div>
-
-<div class="fitgrid">
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
-<h3>Egg Protein</h3>
-<p>High Protein Energy Food</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e">
-<h3>Chicken Bowl</h3>
-<p>Lean Muscle Building Meal</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
-<h3>Sprouts & Salad</h3>
-<p>Fiber Rich Healthy Food</p>
-</div>
-
-<div class="fitbox">
-<img src="https://images.unsplash.com/photo-1579722821273-0f6c1f3f6b88">
-<h3>Protein Shake</h3>
-<p>Gym Recovery Drink</p>
-</div>
-
-</div>
-
-<div class="right-bar">
-💪 Muscle Gain<br><br>
-🔥 Fat Loss<br><br>
-⚡ Energy<br><br>
-🥗 Fiber Diet<br><br>
-❤️ Healthy Life
-</div>
-
-</div>
-
-</body>
-</html>
+); }
