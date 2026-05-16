@@ -5,24 +5,27 @@ const nonVegItems = [ { name: 'Grilled Chicken Bowl', protein: '35g Protein', pr
 
 return ( <div className="bg-black text-white min-h-screen font-sans"> <header className="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <div> <h1 className="text-3xl font-black text-green-400">Fit Dubba</h1> <p className="text-sm text-zinc-400">Fuel Your Fitness</p> </div>
 
-<nav className=" return (
+<header className="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800">
+
   <div className="bg-black border-b border-zinc-800 text-sm py-3 px-6 flex items-center justify-between relative">
 
-  <div className="text-zinc-300">
-    fitdubba@gmail.com
+    <div className="text-zinc-300">
+      fitdubba@gmail.com
+    </div>
+
+    <div className="absolute left-1/2 -translate-x-1/2">
+      <h1 className="text-3xl font-black text-green-400">
+        Fit Dubba
+      </h1>
+    </div>
+
+    <div className="text-zinc-300 font-semibold">
+      Kranthi • 9493522934
+    </div>
+
   </div>
 
-  <div className="absolute left-1/2 -translate-x-1/2">
-    <h1 className="text-3xl font-black text-green-400">
-      Fit Dubba
-    </h1>
-  </div>
-
-  <div className="text-zinc-300 font-semibold">
-    Kranthi • 9493522934
-  </div>
-
-</div>
+  <nav className="hidden md:flex gap-8 font-medium">
 
 <nav className="hidden md:flex gap-8 font-medium">
         <a href="#menu" className="hover:text-green-400">Menu</a>
