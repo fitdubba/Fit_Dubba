@@ -1,133 +1,97 @@
 
-export default function DailyDabbHomepage() { const menuItems = [ { name: 'Andhra Veg Meals', price: '₹99', desc: 'Fresh home-style meals with rice, curry, dal & fry.', }, { name: 'Chicken Meals', price: '₹149', desc: 'Spicy Andhra chicken curry with complete meals.', }, { name: 'Morning Tiffins', price: '₹59', desc: 'Idly, dosa, upma & chutneys delivered hot.', }, ];
+export default function FitDubbaWebsite() { const vegItems = [ { name: 'Paneer Power Bowl', protein: '28g Protein', price: '₹149', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1200&auto=format&fit=crop' }, { name: 'Soya Chunk Rice', protein: '30g Protein', price: '₹139', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop' }, { name: 'Chole Rice Combo', protein: '20g Protein', price: '₹129', image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=1200&auto=format&fit=crop' }, { name: 'Sprouts Salad', protein: '18g Protein', price: '₹99', image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop' }, { name: 'Protein Khichdi', protein: '15g Protein', price: '₹99', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop' }, { name: 'Paneer Wrap Combo', protein: '24g Protein', price: '₹149', image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1200&auto=format&fit=crop' } ]
 
-const plans = [ { title: 'Weekly Plan', price: '₹699', }, { title: 'Monthly Plan', price: '₹2499', }, { title: 'Office Combo', price: '₹3999', }, ];
+const nonVegItems = [ { name: 'Grilled Chicken Bowl', protein: '35g Protein', price: '₹189', image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=1200&auto=format&fit=crop' }, { name: 'Andhra Chicken Meal', protein: '32g Protein', price: '₹199', image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop' }, { name: 'Chicken Keema Rice', protein: '34g Protein', price: '₹199', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop' }, { name: 'Chicken Biryani', protein: '32g Protein', price: '₹229', image: 'https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1200&auto=format&fit=crop' }, { name: 'Fish Fry Meal', protein: '28g Protein', price: '₹219', image: 'https://images.unsplash.com/photo-1559847844-d721426d6edc?q=80&w=1200&auto=format&fit=crop' }, { name: 'High Protein Omelette', protein: '26g Protein', price: '₹149', image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1200&auto=format&fit=crop' } ]
 
-return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Navbar */} <nav className="flex items-center justify-between px-6 py-5 border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur z-50"> <h1 className="text-2xl font-bold tracking-wide text-orange-400"> Daily Dabb </h1>
+return ( <div className="bg-black text-white min-h-screen font-sans"> <header className="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-zinc-800"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <div> <h1 className="text-3xl font-black text-green-400">Fit Dubba</h1> <p className="text-sm text-zinc-400">Fuel Your Fitness</p> </div>
 
-<div className="hidden md:flex gap-8 text-sm text-gray-300">
-      <a href="#menu" className="hover:text-orange-400 transition">
-        Menu
-      </a>
-      <a href="#plans" className="hover:text-orange-400 transition">
-        Plans
-      </a>
-      <a href="#about" className="hover:text-orange-400 transition">
-        About
-      </a>
-      <a href="#contact" className="hover:text-orange-400 transition">
-        Contact
-      </a>
-    </div>
+<nav className="hidden md:flex gap-8 font-medium">
+        <a href="#menu" className="hover:text-green-400">Menu</a>
+        <a href="#plans" className="hover:text-green-400">Plans</a>
+        <a href="#contact" className="hover:text-green-400">Contact</a>
+      </nav>
 
-    <button className="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-full text-sm font-semibold shadow-lg shadow-orange-500/30">
-      Order Now
-    </button>
-  </nav>
-
-  {/* Hero Section */}
-  <section className="px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center">
-    <div>
-      <p className="uppercase tracking-[5px] text-orange-400 text-sm mb-4">
-        Homemade Food Delivery
-      </p>
-
-      <h2 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-        Fresh Meals
-        <br />
-        Delivered Daily 🍱
-      </h2>
-
-      <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-8">
-        Healthy Andhra-style homemade food delivered directly to your
-        home, office, or hostel. Freshly cooked every day with authentic
-        taste.
-      </p>
-
-      <div className="flex flex-wrap gap-4">
-        <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-full font-semibold shadow-2xl shadow-orange-500/40">
-          Start Subscription
-        </button>
-
-        <button className="border border-white/20 hover:border-orange-400 hover:text-orange-400 transition px-8 py-4 rounded-full font-semibold">
-          View Menu
-        </button>
-      </div>
-    </div>
-
-    <div className="relative">
-      <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full"></div>
-
-      <img
-        src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop"
-        alt="Food"
-        className="relative rounded-[35px] shadow-2xl border border-white/10 object-cover h-[500px] w-full"
-      />
-    </div>
-  </section>
-
-  {/* Stats */}
-  <section className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-16 pb-20">
-    {[
-      ['10K+', 'Meals Delivered'],
-      ['4.9★', 'Customer Rating'],
-      ['100%', 'Fresh Cooking'],
-      ['30min', 'Fast Delivery'],
-    ].map((item) => (
-      <div
-        key={item[0]}
-        className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center"
+      <a
+        href="https://wa.me/919493522934"
+        className="bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-full font-bold"
       >
-        <h3 className="text-3xl font-bold text-orange-400 mb-2">
-          {item[0]}
-        </h3>
-        <p className="text-gray-400 text-sm">{item[1]}</p>
+        Order Now
+      </a>
+    </div>
+  </header>
+
+  <section className="relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
+
+    <img
+      src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1600&auto=format&fit=crop"
+      className="w-full h-[700px] object-cover opacity-50"
+    />
+
+    <div className="absolute inset-0 z-20 flex items-center">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-2xl">
+          <p className="text-green-400 text-xl mb-4 font-semibold">
+            Fresh • Healthy • Delivered Daily
+          </p>
+
+          <h2 className="text-5xl md:text-7xl font-black leading-tight">
+            Home Style Meals
+            <span className="block text-orange-400">High In Protein</span>
+          </h2>
+
+          <p className="text-zinc-300 text-lg mt-6 leading-relaxed">
+            Veg & Non-Veg meals, lunch boxes, protein foods and fitness meals delivered fresh every day in Vijayawada.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="https://wa.me/919493522934"
+              className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl font-bold text-lg"
+            >
+              WhatsApp Order
+            </a>
+
+            <a
+              href="https://instagram.com/fitdubba_vij"
+              className="border border-white/30 hover:border-green-400 px-8 py-4 rounded-2xl font-bold text-lg"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
       </div>
-    ))}
+    </div>
   </section>
 
-  {/* Menu */}
-  <section id="menu" className="px-6 md:px-16 py-20 bg-white/[0.03]">
-    <div className="text-center mb-16">
-      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
-        Popular Items
-      </p>
-
-      <h2 className="text-4xl md:text-5xl font-black mb-4">
-        Today's Specials
-      </h2>
-
-      <p className="text-gray-400 max-w-2xl mx-auto">
-        Freshly prepared meals and tiffins with premium ingredients and
-        homemade taste.
-      </p>
+  <section id="menu" className="max-w-7xl mx-auto px-6 py-20">
+    <div className="flex items-center justify-between mb-8">
+      <h3 className="text-4xl font-black text-green-400">Veg Menu</h3>
+      <p className="text-zinc-400">Healthy Vegetarian Meals</p>
     </div>
 
     <div className="grid md:grid-cols-3 gap-8">
-      {menuItems.map((item) => (
+      {vegItems.map((item, index) => (
         <div
-          key={item.name}
-          className="bg-black border border-white/10 rounded-[30px] overflow-hidden hover:-translate-y-2 transition duration-300 shadow-2xl"
+          key={index}
+          className="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-green-400 transition hover:-translate-y-2"
         >
           <img
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
-            alt={item.name}
-            className="h-60 w-full object-cover"
+            src={item.image}
+            className="h-64 w-full object-cover"
           />
 
-          <div className="p-7">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-2xl font-bold">{item.name}</h3>
-              <span className="text-orange-400 font-bold text-xl">
+          <div className="p-6">
+            <div className="flex items-start justify-between">
+              <h4 className="text-2xl font-bold">{item.name}</h4>
+              <span className="text-2xl font-black text-green-400">
                 {item.price}
               </span>
             </div>
 
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              {item.desc}
-            </p>
+            <p className="text-zinc-400 mt-3">{item.protein}</p>
 
-            <button className="w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-semibold">
+            <button className="mt-6 w-full bg-green-500 hover:bg-green-600 transition py-3 rounded-2xl font-bold">
               Order Now
             </button>
           </div>
@@ -136,134 +100,135 @@ return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Navbar
     </div>
   </section>
 
-  {/* Subscription Plans */}
-  <section id="plans" className="px-6 md:px-16 py-24">
-    <div className="text-center mb-16">
-      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
-        Affordable Plans
-      </p>
-
-      <h2 className="text-4xl md:text-5xl font-black mb-4">
-        Subscription Packages
-      </h2>
+  <section className="max-w-7xl mx-auto px-6 pb-20">
+    <div className="flex items-center justify-between mb-8">
+      <h3 className="text-4xl font-black text-orange-400">Non-Veg Menu</h3>
+      <p className="text-zinc-400">High Protein Non-Veg Meals</p>
     </div>
 
     <div className="grid md:grid-cols-3 gap-8">
-      {plans.map((plan) => (
+      {nonVegItems.map((item, index) => (
         <div
-          key={plan.title}
-          className="border border-orange-500/30 bg-gradient-to-b from-orange-500/10 to-transparent rounded-[35px] p-10 text-center hover:scale-105 transition duration-300"
+          key={index}
+          className="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-orange-400 transition hover:-translate-y-2"
         >
-          <h3 className="text-3xl font-bold mb-6">{plan.title}</h3>
+          <img
+            src={item.image}
+            className="h-64 w-full object-cover"
+          />
 
-          <div className="text-5xl font-black text-orange-400 mb-8">
-            {plan.price}
+          <div className="p-6">
+            <div className="flex items-start justify-between">
+              <h4 className="text-2xl font-bold">{item.name}</h4>
+              <span className="text-2xl font-black text-orange-400">
+                {item.price}
+              </span>
+            </div>
+
+            <p className="text-zinc-400 mt-3">{item.protein}</p>
+
+            <button className="mt-6 w-full bg-orange-500 hover:bg-orange-600 transition py-3 rounded-2xl font-bold">
+              Order Now
+            </button>
           </div>
-
-          <ul className="space-y-4 text-gray-300 mb-10">
-            <li>✔ Daily Fresh Meals</li>
-            <li>✔ Fast Delivery</li>
-            <li>✔ WhatsApp Support</li>
-            <li>✔ Flexible Timings</li>
-          </ul>
-
-          <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-full font-semibold w-full">
-            Choose Plan
-          </button>
         </div>
       ))}
     </div>
   </section>
 
-  {/* About */}
-  <section
-    id="about"
-    className="px-6 md:px-16 py-24 bg-white/[0.03] grid md:grid-cols-2 gap-14 items-center"
-  >
-    <img
-      src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop"
-      alt="Kitchen"
-      className="rounded-[35px] shadow-2xl border border-white/10 h-[450px] object-cover"
-    />
+  <section id="plans" className="bg-zinc-950 py-20">
+    <div className="max-w-7xl mx-auto px-6">
+      <h3 className="text-5xl font-black text-center mb-16">
+        Subscription Plans
+      </h3>
 
-    <div>
-      <p className="text-orange-400 uppercase tracking-[4px] mb-4 text-sm">
-        Why Daily Dabb?
-      </p>
-
-      <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-        Homemade Taste
-        <br />
-        Premium Experience
-      </h2>
-
-      <p className="text-gray-400 leading-relaxed text-lg mb-8">
-        We focus on healthy, hygienic, and tasty homemade food for students,
-        employees, and families who want quality meals without compromise.
-      </p>
-
-      <div className="space-y-5">
-        <div className="flex items-center gap-4">
-          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
-          <p>No Preservatives</p>
+      <div className="grid md:grid-cols-3 gap-8">
+        <div className="bg-green-500 text-black rounded-3xl p-10 text-center">
+          <h4 className="text-3xl font-black">Daily Plan</h4>
+          <p className="mt-6 text-lg">Fresh meals every day</p>
+          <div className="text-5xl font-black mt-8">₹119</div>
+          <p className="mt-2">Starting Price</p>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
-          <p>Fresh Ingredients Daily</p>
+        <div className="bg-orange-500 text-black rounded-3xl p-10 text-center scale-105 shadow-2xl">
+          <h4 className="text-3xl font-black">Weekly Plan</h4>
+          <p className="mt-6 text-lg">7 Days Healthy Meals</p>
+          <div className="text-5xl font-black mt-8">₹799</div>
+          <p className="mt-2">Per Week</p>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="h-4 w-4 bg-orange-400 rounded-full"></div>
-          <p>Affordable Subscription Plans</p>
+        <div className="bg-white text-black rounded-3xl p-10 text-center">
+          <h4 className="text-3xl font-black">Monthly Plan</h4>
+          <p className="mt-6 text-lg">30 Days Complete Nutrition</p>
+          <div className="text-5xl font-black mt-8">₹2999</div>
+          <p className="mt-2">Per Month</p>
         </div>
       </div>
     </div>
   </section>
 
-  {/* Footer */}
-  <footer
-    id="contact"
-    className="px-6 md:px-16 py-14 border-t border-white/10"
-  >
-    <div className="grid md:grid-cols-3 gap-10">
-      <div>
-        <h3 className="text-3xl font-black text-orange-400 mb-4">
-          Daily Dabb
+  <section id="contact" className="max-w-7xl mx-auto px-6 py-20">
+    <div className="grid md:grid-cols-2 gap-10">
+      <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+        <h3 className="text-4xl font-black mb-8 text-green-400">
+          Why Fit Dubba?
         </h3>
 
-        <p className="text-gray-400 leading-relaxed max-w-sm">
-          Fresh homemade meals delivered daily across Vijayawada.
-        </p>
-      </div>
-
-      <div>
-        <h4 className="font-bold text-xl mb-5">Quick Links</h4>
-
-        <div className="space-y-3 text-gray-400">
-          <p>Home</p>
-          <p>Menu</p>
-          <p>Plans</p>
-          <p>Contact</p>
+        <div className="space-y-5 text-lg text-zinc-300">
+          <p>✅ High Protein Meals</p>
+          <p>✅ Fresh Ingredients Daily</p>
+          <p>✅ Home Style Taste</p>
+          <p>✅ Gym Friendly Foods</p>
+          <p>✅ Fast Delivery</p>
+          <p>✅ Affordable Pricing</p>
         </div>
       </div>
 
-      <div>
-        <h4 className="font-bold text-xl mb-5">Contact</h4>
+      <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
+        <h3 className="text-4xl font-black mb-8 text-orange-400">
+          Contact & Orders
+        </h3>
 
-        <div className="space-y-3 text-gray-400">
-          <p>📍 Vijayawada</p>
-          <p>📞 +91 98765 43210</p>
-          <p>📧 dailydabb@gmail.com</p>
-          <p>📸 @dailydabb</p>
+        <div className="space-y-6 text-lg text-zinc-300">
+          <div>
+            <p className="font-bold text-white">WhatsApp Orders</p>
+            <p>9493522934</p>
+          </div>
+
+          <div>
+            <p className="font-bold text-white">Instagram</p>
+            <p>@fitdubba_vij</p>
+          </div>
+
+          <div>
+            <p className="font-bold text-white">UPI Payments</p>
+            <p>8340023013-2@ybl</p>
+          </div>
+
+          <div>
+            <p className="font-bold text-white">Delivery Time</p>
+            <p>All Days • 5AM - 10PM</p>
+          </div>
+
+          <div>
+            <p className="font-bold text-white">Location</p>
+            <p>Vijayawada, Andhra Pradesh</p>
+          </div>
         </div>
+
+        <a
+          href="https://wa.me/919493522934"
+          className="block text-center mt-10 bg-green-500 hover:bg-green-600 transition py-4 rounded-2xl font-black text-xl"
+        >
+          Order On WhatsApp
+        </a>
       </div>
     </div>
+  </section>
 
-    <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-sm">
-      © 2026 Daily Dabb. All rights reserved.
-    </div>
+  <footer className="border-t border-zinc-800 py-8 text-center text-zinc-500">
+    © 2026 Fit Dubba • Healthy Meals Delivered Daily
   </footer>
 </div>
 
-); }
+) }
